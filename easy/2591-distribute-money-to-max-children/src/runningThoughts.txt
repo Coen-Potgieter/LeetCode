@@ -1,0 +1,21 @@
+
+
+- we get money and children both ints
+- rules to distr money
+    1. all money distr
+    2. every gets at least 1 dollar
+    3. no one gets exactly 4 dollars
+
+- Return max # of children who may get exaclty 8 dollars according to above rules
+- If no distr then return -1
+
+- constraints
+    - 1 <= money <= 200
+    - 2 <= children <= 30
+
+
+
+- Plan
+    - See how many kids can get 8 each then check constraints
+    - Make a final array of full distributions then check all constraints on that array
+
