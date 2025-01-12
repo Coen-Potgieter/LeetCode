@@ -1,0 +1,14 @@
+
+- Reverse the order of a linked list
+- Starting at head
+
+- Constraints
+    1. num Nodes: [0, 5000]
+    2. vals are trivial
+
+- plan:
+    - Need 3 pointers:
+        1. A Traveler (this will allows us to move to the next node)
+        2. A Changing (this will be what we are chaning)
+        3. Point to (this will be what we change to)
+    - Need to figure out what happens when we have less than 3 nodes though
