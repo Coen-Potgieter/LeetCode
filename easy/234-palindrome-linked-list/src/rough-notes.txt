@@ -1,0 +1,13 @@
+
+- if the first half of the list = the second half of the list
+- constraints:
+    1. num nodes = [1, 10^5]
+    2. Node valie = [1, 9]
+
+
+- Plan:
+    - Could brute force this
+        1. Separate vector to store all values
+        2. Get size of vector at the end
+        3. Divide the vector into 2 and check for equality
+        - Lets try this
