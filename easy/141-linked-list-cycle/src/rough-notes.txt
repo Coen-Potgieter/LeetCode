@@ -1,0 +1,16 @@
+
+
+- determine if there is a cycle
+- return true if cycle otherwise false
+- constraints:
+    1. num nodes in a given list: [0, 10^4]
+    2. values are trivial
+    3. pos is some index or -1 of there is no cycle
+
+- plan:
+    - keep track of seen pointers in a separate array and check if we have seen it
+        - I think this would work
+    - They want O(1) memory though
+        - Maybe cycle through 10^4 times, if we havent reach null ptr then there must be a loop
+        - This will be slow though?
+
