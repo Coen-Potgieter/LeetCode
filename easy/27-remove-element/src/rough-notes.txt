@@ -1,0 +1,21 @@
+
+
+
+
+- Remove all instances of `val`
+- Order does not matter
+- return number of elements that are not `val`
+
+- conditions of success:
+    - first k elems are not `val`
+    - return k
+
+- constraints
+    - nums.length = [0,100]
+    - elem of nums = [0,50]
+    - val = [0,100]
+
+- Plan
+    - itterate through array
+    - When we find an element with the value we swap with last element
+    - increase k
