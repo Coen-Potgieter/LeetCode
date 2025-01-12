@@ -1,0 +1,4 @@
+
+
+- Increment the last digit of the vector
+- only complication is when the last digit is 9
