@@ -1,0 +1,8 @@
+
+
+
+- given sorted array of distinct vals reutnr index of target
+- if not found then return index where it should be placed
+- must be O(log(n))
+
+- This is just binary search?
