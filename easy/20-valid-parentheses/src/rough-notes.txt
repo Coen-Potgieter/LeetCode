@@ -1,0 +1,12 @@
+
+
+- Basic stack question
+
+- oppening parenthesis pushes onto the stack
+- closing will pop from the stack and the must match
+- if not then invalid
+
+
+- constrainst
+    1. string length is [1, 10^4]
+    2. brackets can only be: `()[]{}`
