@@ -1,0 +1,15 @@
+
+- Don't really need a stack here. 
+- Just need an array the size of the given input then populate the array 
+
+- Nothing really special here
+
+- +: sum prev 2 scores
+- D: double prev score
+- C: Remove last score
+
+- constraints:
+    1. num Ops: [1, 1000]
+    2. possible ops: int or +,D,C
+    3. No edge cases for +, there will always be 2 prev scores available to add
+    4. same for D & C, there will always be scores before them
