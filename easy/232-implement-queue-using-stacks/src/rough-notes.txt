@@ -1,0 +1,25 @@
+
+- similar story here as with implementing a stack with a queue
+    - either popping will be slow
+    - or inserting will be slow
+
+- I think we will push less so lets make that slow
+
+- Thoughts
+    - stack has one `top`
+    - queue has `front` and `back` where:
+        - push: at `back`
+        - pop: at `front`
+    - so i need push to happen at the bottom of the stack, and everything is fine
+    - this means create 
+    - should have read the thing
+        - it says using 2 stacks but i though my thinking was bad
+    - We need to change either popping or pushing...
+        - i did pushing for the last problem (implement queue using stacks)
+        - so thus i will change popping
+    - no matter what we do we need to reverse the stack
+
+    - FUCK:
+        - I need to change the push rather than the pop
+        - since peeking requires the `front` of the list
+        - this means that the `top` of our stack should align with the `front` of our queue
