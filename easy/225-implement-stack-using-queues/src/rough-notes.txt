@@ -1,0 +1,6 @@
+
+- Only trick here is the pushing
+    - I think i could have change the popping but still would mean linear runtime
+- when pusing create a new queue and copy all the elems from the old queue into there
+- This keeps the most recently added elem at the `front` of our queue (or rather at the `top` of our stack)
+- The rest of the methods should be trivial
