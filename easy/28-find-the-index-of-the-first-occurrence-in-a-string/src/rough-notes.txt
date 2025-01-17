@@ -1,0 +1,7 @@
+
+
+- have an index that points to the starting index
+- cycle to check mathcing letters with a second pointer
+
+Note:   
+    - only lowercase letters
