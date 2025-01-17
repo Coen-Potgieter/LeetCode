@@ -1,0 +1,21 @@
+
+
+- only method i can think of is pretty ugly...
+
+- maybe a queue? 
+    - when we would we dequeue?
+    - say we have "abcabcabcabc", then this would work i think
+    - say we have "abadabad", which would we dequeue off? idk
+
+- i just did haystack needle one and i think i could use the same logic here...
+    - Take the first letter of the string as the key
+    - see if this key repeats
+    - if not take the first 2 letters and so on...
+
+- maybe queue could work...
+    - have a separate hash table of the letters in our queue as keys
+    - if the dequeue of one of our letters causes not found then we increase that dequeue counter????
+
+    - Dont need hash table. 
+    - loop through chars of s, put chars in a q, when we see repeating char then make q our key and see if the rest of s matches
+    - if not then increase starting chars numRepeating value to then allow for 2 repetitions or something like this...
