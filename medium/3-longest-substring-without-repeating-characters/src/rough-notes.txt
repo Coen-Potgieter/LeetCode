@@ -1,0 +1,16 @@
+
+
+- This is tries?
+- I know how sliding windows work and this looks like smallest subarray sum larger than S a little bit
+- So gonna use a dynamiccally sized sliding window
+
+
+- constraints:  
+    - length of string: [0, 5*10^5]
+    - s contanis letters, digits, symbols, spaces
+
+- Plan:
+    - slide window then check for unqiue chars in substring
+        - only way i can think of checking for unqiue substring is populating an array or something and checking like this
+
+
