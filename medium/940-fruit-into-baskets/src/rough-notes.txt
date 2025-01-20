@@ -1,0 +1,12 @@
+
+
+
+- Pick max number of fruits where the int defines the type of fruit in the array
+
+- rules:    
+    1. only 2 types
+    2. must be contiguous from left to right
+
+- Plan
+    - This is basically dynamically sliding window as well as unique types (not really unique but constrainst on sub array)
+    - gonna check for subarray constrainst using hashmaps
