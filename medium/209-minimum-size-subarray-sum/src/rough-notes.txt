@@ -1,0 +1,9 @@
+
+
+- Have this problem in my notes of learning sliding windows...
+- standard dynamiic window size things
+
+- constrinsts:
+    - target: [1, 10^9]
+    - num elements: [1, 10^5]
+    - each elem: [1, 10^4]
