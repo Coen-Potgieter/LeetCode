@@ -1,0 +1,8 @@
+
+
+
+- given array (`nums`) with `n` elements and some int `k`
+- find subarray with highest avg 
+
+- This is a simply sliding window problem
+    - static window at that
