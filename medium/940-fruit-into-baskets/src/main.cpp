@@ -11,29 +11,40 @@ public:
         std::unordered_map<int, int> ht;
         int maxLength = INT_MIN;
         int myStart = 0;
+        int myEnd = 0;
 
-        for (int end = 0; end < fruits.size(); end++) {
+        bool add = true;
 
-            if (ht.count(fruits[end])) {
-                ht[fruits[end]] += 1;
-            } else {
-                ht[fruits[end]] = 1;
+        while (myEnd < fruits.size()) {
+
+            if (add) {
+                if (ht.count(fruits[myEnd])) {
+                    ht[fruits[myEnd]] += 1;
+                } else {
+                    ht[fruits[myEnd]] = 1;
+                }
             }
 
             if (ht.size() <= 2) {
-                if ((end - myStart + 1) > maxLength) maxLength = end-myStart+1;
-            } else {
-                if (ht[fruits[myStart]] == 1) {
-                    ht.erase(fruits[myStart]);
-                } else {
-                    fruits[myStart] -= 1;
+
+                if ((myEnd - myStart + 1) > maxLength) {
+                    maxLength = myEnd - myStart + 1;
                 }
+                myEnd += 1;
+                add = true;
 
-                end -= 1;
+
+            } else {
+
+                ht[fruits[myStart]] -= 1;
+                if (ht[fruits[myStart]] <= 0) {
+                    ht.erase(fruits[myStart]);
+                }
                 myStart += 1;
+                add = false;
             }
-        }
 
+        }
         return (maxLength == INT_MIN) ? 0 : maxLength;
     }
 };
