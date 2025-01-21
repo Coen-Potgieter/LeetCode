@@ -20,12 +20,49 @@ struct TreeNode {
 class Solution {
 private:
 
-    void binarySearch(TreeNode* root, int target) {
+    bool bfs(TreeNode* root, int target) {
 
+        std::queue<TreeNode*> q;
+        q.push(root);
+
+        while (!q.empty()) {
+            TreeNode* currNode = q.front(); q.pop();
+
+            if (currNode->val == target) {
+                return true;
+            }
+
+            if (currNode->left) q.push(currNode->left);
+            if (currNode->right) q.push(currNode->right);
+        }
+        return false;
     }
+
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
 
+        // check left subtree
+
+
+        bool bothLeft = false;
+        if (root->left) {
+            bothLeft = (bfs(root->left, p->val) & bfs(root->left, q->val));
+        }
+        if (bothLeft) {
+            return lowestCommonAncestor(root->left, p, q);
+        }
+
+        // if not not both right then check if both right...
+        bool bothRight = false;
+        if (root->right) {
+            bothRight = (bfs(root->right, p->val) & bfs(root->right, q->val));
+        }
+        if (bothRight) {
+            return lowestCommonAncestor(root->right, p, q);
+        }
+
+        // if neither both right nor both left, then answer must be the node we are currently ont right?????
+        return root;
     }
 };
 
@@ -157,12 +194,13 @@ TreeNode* findNode(TreeNode* root, int element) {
 
 int main() {
 
-    std::vector<std::optional<int>> tree1 = { 1,2,3,4,5,6, std::nullopt};
-    std::vector<std::optional<int>> tree2 = {3,5,1,6,2,0,8,std::nullopt,std::nullopt,7,4};
+    std::vector<std::optional<int>> tree1 = {3,5,1,6,2,0,8,std::nullopt,std::nullopt,7,4};
     int p1 = 5;
     int q1 = 8;
+    int p2 = 5;
+    int q2 = 4;
 
-    std::vector<std::optional<int>> tree = tree2;
+    std::vector<std::optional<int>> tree = tree1;
 
     std::cout << "\nCreating Tree..." << std::endl;
     TreeNode* root = createTree(tree);
@@ -171,8 +209,8 @@ int main() {
     printTree(root);
 
 
-    TreeNode* p = findNode(root, 5);
-    TreeNode* q = findNode(root, 1);
+    TreeNode* p = findNode(root, p2);
+    TreeNode* q = findNode(root, q2);
 
 
 
@@ -195,7 +233,7 @@ int main() {
     std::cout << "p: " << p->val << std::endl;
     std::cout << "q: " << q->val << std::endl;
 
-    std::cout << "\nOutput: " << sol.lowestCommonAncestor(root, p, q) << std::endl;
+    std::cout << "\nOutput: " << sol.lowestCommonAncestor(root, p, q)->val << std::endl;
 
     std::cout << "\n\nDeleting Tree..." << std::endl;
     deleteTree(root, true);
