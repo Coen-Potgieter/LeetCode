@@ -32,3 +32,20 @@ Plan:
     - uhhh, need a better solution i suppose
     - damn, idk bro
     - COME BACK TO THIS!!!
+
+    - Im back:
+        - sort the input array
+        - this way we can avoid duplicates by skipping over seen first indicies and so on
+        - this also allows us to cut off the search if our sum gets too big
+        - we thus cut the search smaller, in a couple different ways
+
+
+
+
+
+
+
+
+
+
+
