@@ -1,0 +1,24 @@
+
+- FIRST LCA PROBLEM...
+
+
+Problem:
+    - Given unordered Binary Tree
+    - Given p & q, must find lowest common ancestor between p & q
+
+Constraints:
+    - all nodes unique
+    - p != q
+    - p & q always exist in the tree
+
+Plan:
+    - Idea 1:
+        - Thought of some bfs thing where we populate each level in their own array
+        - then determine lca using the halfs of each array or something like this
+    - Idea 2:
+        - Start on root node
+        - do binary search on left subtree
+            - if both found then go one level deeper 
+            - if none found then check right subtree
+            - if one found then of the node we are on is the LCA???
+        - Lets see if this works...
