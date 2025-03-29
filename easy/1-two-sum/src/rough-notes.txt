@@ -1,0 +1,11 @@
+
+
+- 1 pointer for num 1
+- 1 pointer for num 2
+- can only think of On^2 time
+- Can cut it if number is larger than target
+
+
+
+
+- sort the array, cut out numbers too big, then search in reverse order
