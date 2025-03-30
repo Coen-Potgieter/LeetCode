@@ -11,24 +11,20 @@ public:
 
     std::stack<int> mainStack;
     std::stack<int> minStack;
-    MinStack() {
-    }
+    MinStack() = default;
 
     void push(int val) {
 
         this->mainStack.push(val);
-
         if (this->minStack.empty()) {
             this->minStack.push(val);
             return;
         }
-
         int currMin = this->minStack.top();
         if (val <= currMin) minStack.push(val);
     }
 
     void pop() {
-
         int toBePopped = this->mainStack.top();
         if (toBePopped <= this->minStack.top()) minStack.pop();
         this->mainStack.pop();
